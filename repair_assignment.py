@@ -247,3 +247,9 @@ for name in ("15-index.html", "16-index.html", "17-index.html", "18-index.html")
   text = text.replace('<header><div><span>Techium</span><nav></nav></div></header>', '<header><div><span>Techium</span></div><nav></nav></header>')
   text = text.replace('<header><div><a href="/"><span>Techium</span></a><nav></nav></div></header>', '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>')
   path.write_text(text, encoding="utf-8")
+
+# Task 15 wraps each original section once; task 16 performs the later split.
+wrapped15 = task12.replace('<header><nav></nav></header>', '<header><div><span>Techium</span></div><nav></nav></header>')
+wrapped15 = wrapped15.replace('<section>', '<section><div>').replace('</section>', '</div></section>')
+wrapped15 = wrapped15.replace('<footer>Footer</footer>', '<footer><div>Footer</div></footer>')
+write("15-index.html", page("Homepage - Techium", wrapped15))
