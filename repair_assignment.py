@@ -227,6 +227,10 @@ write("about.html", page("About - Techium", linked_body))
 write("latest_news.html", page("Latest news - Techium", linked_body))
 write("contact.html", page("Contact - Techium", linked_body))
 
+# Task 23: every level-three heading in Services, Works, and Latest news is a
+# link to #, while the other homepage headings remain unchanged.
+write("23-index.html", page("Homepage - Techium", home_header + '<main><h1>Homepage</h1>' + sections + '</main><footer>' + social + '</footer>'))
+
 media_for_36 = media_sections.replace('</h3></article><article><div><img src="images/pic-blog-02.jpg"', '</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><small>By Kelly D.</small></article><article><div><img src="images/pic-blog-02.jpg"', 1).replace('</h3></article><article><div><img src="images/pic-blog-03.jpg"', '</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><small>By William A.</small></article><article><div><img src="images/pic-blog-03.jpg"', 1).replace('</h3></article></div></section>\n<section id="testimonials"', '</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><small>By Frances J.</small></article></div></section>\n<section id="testimonials"', 1)
 for name in ("36-index.html", "index.html"):
   generated = (ROOT / name).read_text(encoding="utf-8")
