@@ -147,3 +147,19 @@ write("34-styleguide.html", page("Styleguide - Techium", f'<header></header><mai
 write("38-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}<!-- Video -->{video}</main><footer></footer>'))
 write("39-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}{video}<!-- Audio -->{audio}</main><footer></footer>'))
 write("styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}{video}{audio}<!-- Iframe -->{iframe}</main><footer></footer>'))
+
+# The navigation and page-copy tasks must preserve the complete homepage built
+# by task 17; only the requested link or footer change is added at each step.
+home_header = '<header><div><a href="/"><span>Techium</span></a></div>' + nav + '</header>'
+home_main = '<main><h1>Homepage</h1>' + sections + '</main>'
+simple_footer = '<footer><div>Footer</div></footer>'
+write("14-index.html", page("Homepage - Techium", '<header><div><span>Techium</span></div><nav></nav></header>' + home_main + simple_footer))
+write("18-index.html", page("Homepage - Techium", home_header + home_main + simple_footer))
+for name, title, heading in (("about.html", "About", "About"), ("latest_news.html", "Latest news", "Latest news"), ("contact.html", "Contact", "Contact")):
+  write(name, page(f"{title} - Techium", home_header + '<main><h1>' + heading + '</h1>' + sections + '</main>' + simple_footer))
+write("20-index.html", page("Homepage - Techium", home_header + home_main + simple_footer))
+write("21-index.html", page("Homepage - Techium", home_header + home_main + '<footer>' + social + '</footer>'))
+write("22-index.html", page("Homepage - Techium", home_header + home_main + '<footer>' + social + '</footer>'))
+write("23-index.html", page("Homepage - Techium", home_header + home_main + '<footer>' + social + '</footer>'))
+write("24-index.html", page("Homepage - Techium", home_header + home_main + '<footer>' + social + '</footer>'))
+write("25-index.html", page("Homepage - Techium", home_header + home_main + '<footer>' + social + secondary + '</footer>'))
