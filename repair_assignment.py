@@ -252,8 +252,8 @@ for name in ("15-index.html", "16-index.html", "17-index.html", "18-index.html")
 # all other generation steps have completed.
 task17_path = ROOT / "17-index.html"
 task17_text = task17_path.read_text(encoding="utf-8")
-task17_text = task17_text.replace('<!-- Header to help with scanning your code -->\n<header>', '<!-- Header to help with scanning your code --><header>')
-task17_text = task17_text.replace('</header>\n<!-- Main to help with scanning your code -->\n<main>', '</header><!-- Main to help with scanning your code --><main>')
-task17_text = task17_text.replace('</main>\n<!-- Footer to help with scanning your code -->\n<footer>', '</main><!-- Footer to help with scanning your code --><footer>')
+task17_text = task17_text.replace('<!-- Header to help with scanning your code --><header>', '<!-- Header to help with scanning your code -->\n<header>')
+task17_text = task17_text.replace('</header><!-- Main to help with scanning your code --><main>', '</header>\n<!-- Main to help with scanning your code -->\n<main>')
+task17_text = task17_text.replace('</main><!-- Footer to help with scanning your code --><footer>', '</main>\n<!-- Footer to help with scanning your code -->\n<footer>')
 task17_text = task17_text.replace('</section><!-- ', '</section>\n<!-- ')
 task17_path.write_text(task17_text, encoding="utf-8")
