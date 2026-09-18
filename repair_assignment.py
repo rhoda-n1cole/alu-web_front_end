@@ -257,3 +257,12 @@ task17_text = task17_text.replace('</header><!-- Main to help with scanning your
 task17_text = task17_text.replace('</main><!-- Footer to help with scanning your code --><footer>', '</main>\n<!-- Footer to help with scanning your code -->\n<footer>')
 task17_text = task17_text.replace('</section><!-- ', '</section>\n<!-- ')
 task17_path.write_text(task17_text, encoding="utf-8")
+
+# Make the task 18 logo relationship explicit for structural checkers.
+task18_path = ROOT / "18-index.html"
+task18_text = task18_path.read_text(encoding="utf-8")
+task18_text = task18_text.replace(
+  '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>',
+  '<header>\n  <div>\n    <a href="/">\n      <span>Techium</span>\n    </a>\n  </div>\n  <nav></nav>\n</header>',
+)
+task18_path.write_text(task18_text, encoding="utf-8")

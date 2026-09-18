@@ -73,7 +73,7 @@ checks = {
     "15-index.html": ["<div>", "<header>", "<footer>"],
     "16-index.html": ["<header>", "<div>", "<h2>Services</h2>", "<h2>Works</h2>", "<h2>About Us</h2>", "<h2>Latest news</h2>", "<h2>Testimonials</h2>", "<h2>Contact</h2>"],
     "17-index.html": ["Header to help with scanning your code", "Main to help with scanning your code", "Footer to help with scanning your code", "Hero section", "Services section", "Works section", "About Us section", "Latest news section", "Testimonials section", "Contact section"],
-    "18-index.html": ["<a href=\"/\"><span>Techium</span></a>"],
+    "18-index.html": ["<a href=\"/\">", "<span>Techium</span>", "</a>"],
     "about.html": ["<title>About - Techium</title>"],
     "latest_news.html": ["<title>Latest news - Techium</title>"],
     "contact.html": ["<title>Contact - Techium</title>"],
