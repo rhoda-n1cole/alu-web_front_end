@@ -266,3 +266,13 @@ task18_text = task18_text.replace(
   '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>',
 )
 task18_path.write_text(task18_text, encoding="utf-8")
+
+# Task 21 adds direct social links inside the existing footer div. Lists are
+# introduced later by task 24, so no ul/li wrapper belongs here.
+task21_path = ROOT / "21-index.html"
+task21_text = task21_path.read_text(encoding="utf-8")
+task21_text = task21_text.replace(
+  '<div><ul>\n<li><a href="https://www.facebook.com/HolbertonSchool/">Facebook</a></li>\n<li><a href="https://twitter.com/holbertonschool">Twitter</a></li>\n<li><a href="https://www.instagram.com/holbertonschool/">Instagram</a></li>\n</ul></div>',
+  '<div><a href="https://www.facebook.com/HolbertonSchool/">Facebook</a><a href="https://twitter.com/holbertonschool">Twitter</a><a href="https://www.instagram.com/holbertonschool/">Instagram</a></div>',
+)
+task21_path.write_text(task21_text, encoding="utf-8")
