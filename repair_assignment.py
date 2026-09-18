@@ -239,3 +239,11 @@ for name in ("36-index.html", "index.html"):
   generated = generated.replace('<h3>Ut alios omittam, hunc appello, quem ille unum secutus est.</h3>', '<h3>Ut alios omittam, hunc appello, quem ille unum secutus est.</h3><small>By William A.</small>')
   generated = generated.replace('<h3>Bestiarum vero nullum iudicium puto.</h3>', '<h3>Bestiarum vero nullum iudicium puto.</h3><small>By Frances J.</small>')
   (ROOT / name).write_text(generated, encoding="utf-8")
+
+# Keep the navigation as a sibling of the logo wrapper, as required by task 15.
+for name in ("15-index.html", "16-index.html", "17-index.html", "18-index.html"):
+  path = ROOT / name
+  text = path.read_text(encoding="utf-8")
+  text = text.replace('<header><div><span>Techium</span><nav></nav></div></header>', '<header><div><span>Techium</span></div><nav></nav></header>')
+  text = text.replace('<header><div><a href="/"><span>Techium</span></a><nav></nav></div></header>', '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>')
+  path.write_text(text, encoding="utf-8")
