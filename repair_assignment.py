@@ -138,15 +138,15 @@ iframe = '<section><header><h2>Iframe</h2></header><div><iframe title="Holberton
 
 write("11-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}</main><footer></footer>'))
 write("13-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}</main><footer></footer>'))
-write("26-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}</main><footer></footer>'))
-write("28-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}<!-- Horizontal rule -->{horizontal_rule}</main><footer></footer>'))
-write("30-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}<!-- Blockquotes -->{blockquotes}</main><footer></footer>'))
-write("32-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}<!-- Typography -->{typography}</main><footer></footer>'))
-write("33-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}<!-- Table -->{table}</main><footer></footer>'))
-write("34-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}<!-- Details -->{details}</main><footer></footer>'))
-write("38-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}<!-- Video -->{video}</main><footer></footer>'))
-write("39-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}{video}<!-- Audio -->{audio}</main><footer></footer>'))
-write("styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}{lists}{horizontal_rule}{blockquotes}{typography}{table}{details}{video}{audio}<!-- Iframe -->{iframe}</main><footer></footer>'))
+write("26-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}</main><footer></footer>'))
+write("28-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}</main><footer></footer>'))
+write("30-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}</main><footer></footer>'))
+write("32-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}</main><footer></footer>'))
+write("33-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}\n<!-- Table -->\n{table}</main><footer></footer>'))
+write("34-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}\n<!-- Table -->\n{table}\n<!-- Details -->\n{details}</main><footer></footer>'))
+write("38-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}\n<!-- Table -->\n{table}\n<!-- Details -->\n{details}\n<!-- Video -->\n{video}</main><footer></footer>'))
+write("39-styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}\n<!-- Table -->\n{table}\n<!-- Details -->\n{details}\n<!-- Video -->\n{video}\n<!-- Audio -->\n{audio}</main><footer></footer>'))
+write("styleguide.html", page("Styleguide - Techium", f'<header></header><main>{headings}{paragraphs}<!-- Lists -->\n{lists}\n<!-- Horizontal rule -->\n{horizontal_rule}\n<!-- Blockquotes -->\n{blockquotes}\n<!-- Typography -->\n{typography}\n<!-- Table -->\n{table}\n<!-- Details -->\n{details}\n<!-- Video -->\n{video}\n<!-- Audio -->\n{audio}\n<!-- Iframe -->\n{iframe}</main><footer></footer>'))
 
 # The navigation and page-copy tasks must preserve the complete homepage built
 # by task 17; only the requested link or footer change is added at each step.
