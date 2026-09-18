@@ -262,7 +262,7 @@ task17_path.write_text(task17_text, encoding="utf-8")
 task18_path = ROOT / "18-index.html"
 task18_text = task18_path.read_text(encoding="utf-8")
 task18_text = task18_text.replace(
-  '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>',
   '<header>\n  <div>\n    <a href="/">\n      <span>Techium</span>\n    </a>\n  </div>\n  <nav></nav>\n</header>',
+  '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>',
 )
 task18_path.write_text(task18_text, encoding="utf-8")
