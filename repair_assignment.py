@@ -248,6 +248,13 @@ for name in ("15-index.html", "16-index.html", "17-index.html", "18-index.html")
   text = text.replace('<header><div><a href="/"><span>Techium</span></a><nav></nav></div></header>', '<header><div><a href="/"><span>Techium</span></a></div><nav></nav></header>')
   path.write_text(text, encoding="utf-8")
 
+# Task 17 requires every section comment to be on its own line immediately
+# before the section it describes.
+task17_path = ROOT / "17-index.html"
+task17_text = task17_path.read_text(encoding="utf-8")
+task17_text = task17_text.replace('</section><!-- ', '</section>\n<!-- ')
+task17_path.write_text(task17_text, encoding="utf-8")
+
 # Task 15 wraps each original section once; task 16 performs the later split.
 wrapped15 = task12.replace('<header><nav></nav></header>', '<header><div><span>Techium</span></div><nav></nav></header>')
 wrapped15 = wrapped15.replace('<section>', '<section><div>').replace('</section>', '</div></section>')
