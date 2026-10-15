@@ -1,0 +1,9 @@
+/* Task 10: Center the section headers. */
+
+:root {
+  --section-header-align: center;
+}
+
+.section-header {
+  text-align: var(--section-header-align);
+}

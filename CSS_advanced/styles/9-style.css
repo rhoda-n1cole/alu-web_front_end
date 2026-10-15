@@ -1,0 +1,5 @@
+/* Task 9: Remove the default decoration from links. */
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,7 @@
+/* Task 15: Apply border-box sizing to every element. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
